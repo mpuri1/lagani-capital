@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+		<title>Lagani Capital - Stock Report</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<header>
+			<img src="images/nepal_capital.png" alt="Lagani Capital Stock Report" class="header-img">
+		</header>
+		<main>
+			<section class="action-panel">
+				<form id="ticker-input-form">
+					<label for="ticker-input">Add up to 3 stock tickers below to get a professional stock report.</label>
+					<div class="form-input-control">
+						<input type="text" id="ticker-input" placeholder="MSFT">
+						<button class="add-ticker-btn">
+							<img src="images/add.svg" class="add-ticker-svg" alt="add"> 
+						</button>
+					</div>
+				</form>
+				<p class="ticker-choice-display">
+					Your tickers will appear here...
+				</p>
+				<button class="generate-report-btn" type="button" disabled>
+					Generate Report
+				</button>
+				<p class="tag-line">Your trusted source for stock analysis.</p>
+			</section>
+			<section class="loading-panel">
+				<img src="images/loader.svg" alt="loading">
+				<div id="api-message">Querying Stocks API...</div>
+			</section>
+			<section class="output-panel">
+				<h2>Your Report</h2>
+			</section>
+		</main>
+		<footer>
+			For informational purposes only.<br>
+			This is not financial advice. Consult with a professional before making any investment decisions.
+		</footer>
+		<script src="api_keys.js"></script>
+		<script src="index.js" type="module"></script>
+	</body>
+
+</html>
